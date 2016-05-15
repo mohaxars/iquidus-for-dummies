@@ -149,6 +149,7 @@ Editing Cron
 Add Cron to File to update the explorer
 */1 * * * * cd /path/to/explorer && /usr/bin/node scripts/sync.js index update > /dev/null 2>&1
 
-Add Cron to make sure the Pulsed runs
+Add Cron to make sure the Pulsed runs (NOT WORKING)
+If anyone has a good reboot for this, please post in the comments.
 @reboot cd /root/Pulse/src ./pulsed -daemon -txindex
 @reboot cd /root/explorer forever start bin/cluster 
