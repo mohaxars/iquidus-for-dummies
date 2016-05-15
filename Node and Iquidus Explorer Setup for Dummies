@@ -113,7 +113,6 @@ Installing the Explorer
 # cd /home/
 # git clone https://github.com/iquidus/explorer explorer
 # cd explorer && npm install --production
-# sudo npm install pug
 # cp ./settings.json.template ./settings.json
 
 Modify the Settings File
