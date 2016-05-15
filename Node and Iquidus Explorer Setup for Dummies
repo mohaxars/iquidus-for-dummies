@@ -1,6 +1,11 @@
 Node / Iquidus Explorer Setup for Dummies
 Pulse Crypto is used in this example.
 
+This Tutorial is going to create a Daemon (node) and install Explorer.
+THIS IS NOT GOING TO CREATE A GUI CLIENT.
+
+Follow the instructions in [whatever coin name] docs folder Unix build - some builds are different.
+
 I setup this up on both Ubuntu 15.10 and 16.04 with no issues.
 You can create an account on vultr and get $50 free to be used in 2 months.
 Non-refferal link:  https://www.vultr.com/freetrial/
