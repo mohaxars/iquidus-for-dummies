@@ -5,18 +5,23 @@ I setup this up on both Ubuntu 15.10 and 16.04 with no issues.
 You can create an account on vultr and get $50 free to be used in 2 months.
 Non-refferal link:  https://www.vultr.com/freetrial/
 
+******************************************
+*** Change Password / Update System
+******************************************
+
 Change passwords
 # sudo passwd  //change root password
 
 Update Packages
-
 # sudo apt-get update
 # sudo apt-get upgrade -y
 
-Installing Pulse Node
-
 Install git and nano
 # sudo apt-get install nano git -y
+
+******************************************
+*** Installing Pulse Node
+******************************************
 
 Get the Source Code
 
@@ -24,7 +29,6 @@ Basic packages to build the coin
 # sudo apt-get install build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev miniupnpc libminiupnpc-dev autoconf pkg-config libtool autotools-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev automake -y
 
 Create a Swap File - Low Ram Servers
-
 # sudo fallocate -l 4G /swapfile
 # sudo chmod 600 /swapfile
 # sudo mkswap /swapfile
@@ -56,7 +60,6 @@ rpcpassword=Gnfh67gdmRTGvA5YB3UZhV6e6cPTTeneTTdnosLLD3cU
 listen=1
 maxconnections=500
 
-
 *make sure to set the file to read only.
 # sudo chmod 400 .pulse/pulse.conf
 # cd Pulse/src
@@ -68,8 +71,10 @@ Check it daemon has started.  If it returns information, the daemon is working!
 Stopping the daemon
 # sudo ./pulsed stop
 
-Setting up the Explorer
-https://github.com/iquidus/explorer
+******************************************
+*** Setting up the Explorer
+*** https://github.com/iquidus/explorer
+******************************************
 
 Install MongoDB Community Edition
 https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
@@ -94,7 +99,6 @@ Running MongoDB - reference
 # sudo service mongod restart
 
 Installing Nodejs
-
 # sudo apt-get update
 # sudo apt-get install nodejs nodejs-legacy -y
 # sudo apt-get install npm -y
@@ -106,7 +110,6 @@ Creating a MongoDB Database
 > exit
 
 Installing the Explorer
-
 # cd /home/
 # git clone https://github.com/iquidus/explorer explorer
 # cd explorer && npm install --production
@@ -114,7 +117,6 @@ Installing the Explorer
 # cp ./settings.json.template ./settings.json
 
 Modify the Settings File
-
 # sudo nano settings.json
 
 See if it's working
@@ -124,15 +126,16 @@ Update the databases
 # sudo node scripts/sync.js index update 
 
 Install Forever to keep the js running
-
 # sudo npm install forever -g
 # sudo npm install forever-monitor
 
 Start the Explorer
 # forever start bin/cluster
 
-Installing Cron
-https://help.ubuntu.com/community/CronHowto
+******************************************
+*** Installing Cron
+*** https://help.ubuntu.com/community/CronHowto
+******************************************
 
 # sudo apt-get install gnome-schedule -y
 
